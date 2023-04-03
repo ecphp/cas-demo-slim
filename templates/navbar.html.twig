@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">ecphp/cas-lib</a>
+  <div class="container-fluid">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/simple">Simple</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/restricted">Restricted</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/proxy">Proxy</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ms-auto">
+        {% if session.user %}
+          <li class="nav-item">
+            <a class="nav-link" href="/login?renew=true&service={{ service }}">Renew login {{ session.user.serviceResponse.authenticationSuccess.user }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout?service={{ service }}">Logout {{ session.user.serviceResponse.authenticationSuccess.user }}</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/login?service={{ service }}">Login</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,33 @@
+{
+    "require": {
+        "ecphp/cas-lib": "^2.0",
+        "loophp/psr17": "^1.0",
+        "middlewares/debugbar": "^2.1",
+        "monolog/monolog": "^2.9",
+        "nyholm/psr7": "^1.5",
+        "nyholm/psr7-server": "^1.0",
+        "php-di/slim-bridge": "^3.3",
+        "psr7-sessions/storageless": "^8.16",
+        "slim/slim": "4.*",
+        "slim/twig-view": "^3.3",
+        "symfony/cache": "^6.2",
+        "symfony/http-client": "^6.2",
+        "webclient/ext-log": "^1.0",
+        "zeuxisoo/slim-whoops": "^0.7.3"
+    },
+    "require-dev": {
+        "drupol/php-conventions": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "EcPhp\\CasLibDemo\\": "./src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "phpro/grumphp": false,
+            "ergebnis/composer-normalize": true
+        }
+    }
+}

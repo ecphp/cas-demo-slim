@@ -1,0 +1,12 @@
+{{ include('header.html.twig') }}
+
+{{ include('navbar.html.twig') }}
+
+<div class="container-fluid">
+    {% block content %}
+    <h1>Index</h1>
+    <p class="important">
+        Welcome to my awesome homepage.
+    </p>
+    {% endblock %}
+</div>

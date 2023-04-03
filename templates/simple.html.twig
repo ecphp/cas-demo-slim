@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <h1>Simple</h1>
+
+    <p>
+        Hi there {% if session.user %}{{ session.user.serviceResponse.authenticationSuccess.user }}{%else%}anonymous{% endif %} !
+    </p>
+
+    <p>
+        This page is accessible by anonymous and authenticated users.
+    </p>
+{% endblock %}
