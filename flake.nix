@@ -42,7 +42,7 @@
               ];
 
               text = ''
-                composer serve
+                composer --working-dir=${self'.packages.app}/share/php/app-demo/ serve
               '';
             });
           };
