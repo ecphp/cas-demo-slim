@@ -1,14 +1,19 @@
 {
+    "name": "ecphp/cas-lib-demo",
+    "description": "Simple and light application where the CAS authentication against EU Login is enabled.",
+    "license": "BSD-3-Clause",
     "require": {
-        "ecphp/cas-lib": "^2.0",
+        "php": "^8.1",
+        "ecphp/cas-lib": "^3.0",
+        "ecphp/ecas": "^4.0",
         "loophp/psr17": "^1.0",
         "middlewares/debugbar": "^2.1",
         "monolog/monolog": "^2.9",
-        "nyholm/psr7": "^1.5",
+        "nyholm/psr7": "^1",
         "nyholm/psr7-server": "^1.0",
         "php-di/slim-bridge": "^3.3",
-        "psr7-sessions/storageless": "^8.16",
-        "slim/slim": "4.*",
+        "psr7-sessions/storageless": "^9",
+        "slim/slim": "^4.0",
         "slim/twig-view": "^3.3",
         "symfony/cache": "^6.2",
         "symfony/http-client": "^6.2",
@@ -16,7 +21,8 @@
         "zeuxisoo/slim-whoops": "^0.7.3"
     },
     "require-dev": {
-        "drupol/php-conventions": "^5.1"
+        "drupol/php-conventions": "^5.1",
+        "symfony/var-dumper": "^6.3"
     },
     "autoload": {
         "psr-4": {
@@ -29,5 +35,8 @@
             "phpro/grumphp": false,
             "ergebnis/composer-normalize": true
         }
+    },
+    "scripts": {
+        "serve": "php -S 127.0.0.1:8000 -t public"
     }
 }

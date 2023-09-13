@@ -1,2 +1,5 @@
 /.direnv/
 /vendor/
+/result/
+/result
+/.php_cs.cache

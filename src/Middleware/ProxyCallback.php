@@ -17,8 +17,7 @@ final class ProxyCallback implements MiddlewareInterface
     public function __construct(
         private readonly CasInterface $cas,
         private readonly LoggerInterface $logger
-    ) {
-    }
+    ) {}
 
     public function process(
         ServerRequestInterface $request,
